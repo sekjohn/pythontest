@@ -4,10 +4,8 @@ from rest_framework.routers import DefaultRouter
 from teststart  import views
 
 
-router = DefaultRouter()
-router.register('post',views.PostViewSet)
 
 urlpatterns = [
-    path('public/', views.PublicPostListAPIView.as_view()),
-    path('',include(router.urls)),
+    path('post/', views.PostListAPIView.as_view()),
+    path('post/<int:pk>', views.PostDetailAPIView.as_view())
 ]
