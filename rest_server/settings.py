@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'teststart',
     'accounts',
     'rest_framework.authtoken',
+
 ]
 
 MIDDLEWARE = [
@@ -142,3 +143,6 @@ REST_FRAMEWORK = {
 JWT_AUTH = {
     'JWT_ALLOW_REFRESH': True,
 }
+INSTALLED_APPS += [
+     "pinax.templates" 
+]
